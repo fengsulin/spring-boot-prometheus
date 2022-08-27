@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: @project.name@
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  server:
+    port: 8081
